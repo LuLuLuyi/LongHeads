@@ -6,12 +6,16 @@ LongHeads is a training-free framework for extending the context window of large
 
 ### 🚀Quick Start
 #### Environment Setup
-
+```bash
+pip install -r requirements.txt
+# We use flash-attn==2.3.6
+pip install flash-attn --no-build-isolation (FlashAttention >= 2.3.6)
+```
 #### Load model with LongHeads
 ```bash
 # load longheads model
 from modeling_longheads import LlamaForCausalLM
-longheads_condig = {
+longheads_config = {
     # chunk size setting for longheads
     'window_size':256,
     # the attention window length of longheads (atten_length should be smaller to model's pretrained length)
@@ -25,16 +29,13 @@ longheads_condig = {
     # the hyper param for batch encoding
     'encoding_batch_size':128,
 }
-model = LlamaForCausalLM.from_pretrained(
-    "meta-llama/Llama-2-7b-hf", 
-    torch_dtype=torch.float16, 
-    **longheads_condig,
-    ).cuda()
+model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", torch_dtype=torch.float16, **longheads_config)
 ```
-#### Run Inference example
+#### Run Inference Example
 ```bash
 python example.py
 ```
+
 
 
 ### TODOs
