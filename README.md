@@ -23,7 +23,7 @@ longheads_config = {
     # during encoding phrase, we use this praram to begin streamingly encoding long context with chunk selection strategy
     'begin_selective_length':4096,
     # whether offload KV cache to cpu memory, if True longheads can generate to 128k+ context length
-    'cpu_offload':True,
+    'cpu_offload':False,
     # whether use batch_encoding for encoding phrase acceleration, if True more memory will be needed
     'batch_encoding':False,
     # the hyper param for batch encoding
