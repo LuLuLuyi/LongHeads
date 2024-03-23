@@ -1,7 +1,6 @@
 datasets==2.15.0
 deepspeed==0.12.5
 evaluate==0.4.1
-flash-attn==2.3.6
 numpy==1.23.4
 tokenizers==0.14.1
 torch==2.0.1
