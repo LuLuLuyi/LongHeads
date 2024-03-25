@@ -42,8 +42,12 @@ python example.py
 
 ### Passkey Retrieval
 #### LongHeads 128k
-We successfully extend LLaMA-2-7b to 128k with LongHeads without additional training and achieve 100% accuracy with **128k** context on passkey retrieval task! With offloading the KV cache to CPU, peak GPU memory usage is 44.484 GB when inference with 128k context.
-![schemes](figures/longheads.png)
+We successfully extend LLaMA-2-7b to **128k** with LongHeads without additional training and achieve 100% accuracy with **128k** context on passkey retrieval task! With offloading the KV cache to CPU, peak GPU memory usage is 44.484 GB when inference with 128k context.
+<div  align="center">    
+    <img src="figures/passkey_128k.png" alt="passkey_128k" width="50%" height="50%">
+</div>
+
+
 
 #### Evaluation
 ```bash
